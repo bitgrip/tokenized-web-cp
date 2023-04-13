@@ -1,0 +1,144 @@
+/* Todo */
+/*--font-size-mega-fluid: clamp(2.4rem, calc(2.4rem + ((1vw - 0.2rem) * 3.85)), 6.25rem);
+  --font-size-h1-fluid: clamp(2.4rem, calc(2.4rem + ((1vw - 0.2rem) * 2.668)), 5.068rem);
+  --font-size-h2-fluid: clamp(2rem, calc(2rem + ((1vw - 0.2rem) * 2)), 4rem);*/
+
+.main-nav {
+	background-color: rgba(0, 0, 0, 0.95);
+	display: block;
+	font-family: "Mona Sans";
+	font-size: clamp(2.4rem, calc(2.4rem + ((1vw - 0.2rem) * 2.668)), 5.068rem);
+	font-variation-settings: "wdth" 75;
+	font-weight: var(--font-weight-600);
+	line-height: var(--font-line-height-1);
+	height: 100%;
+	position: fixed;
+	top: -100%;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	z-index: var(--z-index-2);
+	transition: var(--transition-200);
+}
+
+.main-nav__list {
+	list-style: none;
+	padding: 0;
+	position: relative;
+	top: 10%;
+}
+
+.nav-item {
+	margin: var(--space-500) auto;
+	text-align: center;
+}
+
+@media (min-width: 48em) {
+	.main-nav__list {
+		margin-left: auto;
+		margin-right: var(--space-400);
+		max-width: 50vw;
+	}
+
+	.nav-item {
+		text-align: right;
+	}
+}
+
+.nav-item > a {
+	color: var(--color-orange-600);
+	padding: var(--space-150);
+	position: relative;
+	text-decoration: none;
+	text-transform: uppercase;
+}
+
+.nav-item > a:hover,
+.nav-item > a:focus {
+	color: var(--color-white);
+	transition: var(--transition-200);
+}
+
+.main-nav--active {
+	animation: showNav 0.6s ease forwards;
+	opacity: 1;
+	transition: var(--transition-300-opacity);
+}
+
+@keyframes showNav {
+	from {
+		top: -100%;
+	}
+	to {
+		top: 0;
+	}
+}
+
+.main-nav--hidden {
+	animation: hideNav 0.4s ease forwards;
+	opacity: 0;
+	transition: var(--transition-300-opacity);
+}
+
+@keyframes hideNav {
+	from {
+		top: 0;
+	}
+	to {
+		top: -100%;
+	}
+}
+
+.menu-button {
+	border: none;
+	background: transparent;
+	cursor: pointer;
+	padding: var(--space-100);
+	position: relative;
+	transition: var(--transition-200);
+	z-index: var(--z-index-5);
+}
+
+.menu-button.is-open .path01 {
+	transform-origin: center;
+	transform: translateX(12%) translateY(11%) rotate(-45deg);
+	transition: var(--transition-200);
+}
+
+.menu-button.is-open .path02 {
+	opacity: 0;
+	transition: var(--transition-200);
+}
+
+.menu-button.is-open .path03 {
+	transform-origin: center;
+	transform: translateX(13%) translateY(-12%) rotate(45deg);
+	transition: var(--transition-200);
+}
+
+.menu-button.is-closed .path01 {
+	transform-origin: center;
+	transform: translateX(0) translateY(0) rotate(0deg);
+	transition: var(--transition-200);
+}
+
+.menu-button.is-closed .path02 {
+	opacity: 1;
+	transition: var(--transition-200);
+}
+
+.menu-button.is-closed .path03 {
+	transform-origin: center;
+	transform: translateX(0) translateY(0) rotate(0deg);
+	transition: var(--transition-200);
+}
+
+.menu-button .icon {
+	fill: var(--color-blue-700);
+	transition: var(--transition-200);
+}
+
+.menu-button.is-open .icon {
+	fill: var(--color-orange-600);
+	transition: var(--transition-200);
+}

@@ -1,0 +1,54 @@
+{
+  "semantics": {
+    "color": {
+      "font": {
+        "copy-onLight": {
+          "value": "{color.neutral.700}",
+          "type": "color"
+        },
+        "headline-onLight": {
+          "value": "{color.neutral.700}",
+          "type": "color"
+        },
+        "headline-onDark": {
+          "value": "{color.white}",
+          "type": "color"
+        },
+        "copy-onDark": {
+          "value": "{color.white}",
+          "type": "color"
+        }
+      },
+      "secondary": {
+        "background": {
+          "value": "{color.orange.700}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.orange.500}",
+          "type": "color"
+        }
+      },
+      "primary": {
+        "background": {
+          "value": "{color.blue.700}",
+          "type": "color"
+        },
+        "hover": {
+          "value": "{color.blue.500}",
+          "type": "color"
+        }
+      }
+    },
+    "line-height": {
+      "heading": {
+        "value": "{font.line-height.1}",
+        "type": "lineHeights"
+      },
+      "copy": {
+        "value": "{font.line-height.default}",
+        "type": "lineHeights"
+      }
+    }
+  }
+}
